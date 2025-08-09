@@ -8,8 +8,12 @@
 > 全新设计的["页面生命周期管理"](https://github.com/FASTSHIFT/X-TRACK/tree/main/Software/X-Track/USER/App/Utils/PageManager)和["消息订阅发布框架"](https://github.com/FASTSHIFT/X-TRACK/tree/main/Software/X-Track/USER/App/Utils/DataCenter)。
 >
 > 演示视频：https://www.bilibili.com/video/BV1GB4y1K7VV
+>
+> 二代版本：https://www.bilibili.com/video/BV1aS421X779
 
 ![image](https://github.com/FASTSHIFT/X-TRACK/blob/main/Images/%E5%9C%B0%E5%9B%BE.jpg)
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/FASTSHIFT/X-TRACK)
 
 ## GUI
 > [LVGL V8](https://github.com/lvgl/lvgl)
@@ -46,6 +50,9 @@ https://user-images.githubusercontent.com/26767803/120889722-1f8d8e80-c631-11eb-
 
 ### 历史轨迹显示([GPXSee](https://github.com/tumic0/GPXSee))
 ![image](https://github.com/FASTSHIFT/X-TRACK/blob/main/Images/%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9.png)
+
+## 常见故障
+见文档: [常见故障排查](https://github.com/FASTSHIFT/X-TRACK/tree/main/Hardware#%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5)
 
 ## 致谢
 > 感谢[@davidce](https://www.geek-workshop.com/home.php?mod=space&uid=204)贡献的参考设计“[自制基于arduino的GPS地图导航系统3.0](https://www.geek-workshop.com/thread-8835-1-1.html)”。
