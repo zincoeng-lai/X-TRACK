@@ -99,6 +99,7 @@ void App_Init()
     manager.Install("Dialplate",   "Pages/Dialplate");
     manager.Install("SystemInfos", "Pages/SystemInfos");
     manager.Install("Startup",     "Pages/Startup");
+    manager.Install("Author",      "Pages/Author");
 
     manager.SetGlobalLoadAnimType(PageManager::LOAD_ANIM_OVER_TOP);
 

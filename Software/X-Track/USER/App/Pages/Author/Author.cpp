@@ -1,77 +1,77 @@
-#include "StartUp.h"
+#include "Author.h"
 
 using namespace Page;
 
-Startup::Startup()
+Author::Author()
 {
 }
 
-Startup::~Startup()
+Author::~Author()
 {
 
 }
 
-void Startup::onCustomAttrConfig()
+void Author::onCustomAttrConfig()
 {
     SetCustomCacheEnable(false);
     SetCustomLoadAnimType(PageManager::LOAD_ANIM_NONE);
 }
 
-void Startup::onViewLoad()
+void Author::onViewLoad()
 {
     Model.Init();
     Model.SetEncoderEnable(false);
     View.Create(_root);
-    lv_timer_t* timer = lv_timer_create(onTimer, 2000, this);
+    lv_timer_t* timer = lv_timer_create(onTimer, 5000, this);
     lv_timer_set_repeat_count(timer, 1);
 }
 
-void Startup::onViewDidLoad()
+void Author::onViewDidLoad()
 {
 }
 
-void Startup::onViewWillAppear()
+void Author::onViewWillAppear()
 {
-    Model.PlayMusic("Startup");
+    // Model.PlayMusic("Author");
     lv_anim_timeline_start(View.ui.anim_timeline);
 }
 
-void Startup::onViewDidAppear()
+void Author::onViewDidAppear()
 {
     lv_obj_fade_out(_root, 500, 1500);
 }
 
-void Startup::onViewWillDisappear()
+void Author::onViewWillDisappear()
 {
 
 }
 
-void Startup::onViewDidDisappear()
+void Author::onViewDidDisappear()
 {
     Model.SetStatusBarAppear(true);
 }
 
-void Startup::onViewUnload()
+void Author::onViewUnload()
 {
     View.Delete();
     Model.SetEncoderEnable(true);
     Model.Deinit();
 }
 
-void Startup::onViewDidUnload()
+void Author::onViewDidUnload()
 {
 }
 
-void Startup::onTimer(lv_timer_t* timer)
+void Author::onTimer(lv_timer_t* timer)
 {
-    Startup* instance = (Startup*)timer->user_data;
+    Author* instance = (Author*)timer->user_data;
 
-    instance->_Manager->Replace("Pages/Author");
+    instance->_Manager->Replace("Pages/Dialplate");
 }
 
-void Startup::onEvent(lv_event_t* event)
+void Author::onEvent(lv_event_t* event)
 {
-    Startup* instance = (Startup*)lv_event_get_user_data(event);
+    Author* instance = (Author*)lv_event_get_user_data(event);
     LV_ASSERT_NULL(instance);
 
     lv_obj_t* obj = lv_event_get_current_target(event);
