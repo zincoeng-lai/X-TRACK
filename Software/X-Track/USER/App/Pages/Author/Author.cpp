@@ -20,10 +20,10 @@ void Author::onCustomAttrConfig()
 void Author::onViewLoad()
 {
     Model.Init();
-    Model.SetEncoderEnable(false);
+    Model.SetEncoderEnable(true);
     View.Create(_root);
-    lv_timer_t* timer = lv_timer_create(onTimer, 5000, this);
-    lv_timer_set_repeat_count(timer, 1);
+    lv_obj_add_flag(_root, LV_OBJ_FLAG_CLICKABLE);
+    lv_obj_add_event_cb(_root, onEvent, LV_EVENT_ALL, this);
 }
 
 void Author::onViewDidLoad()
@@ -38,23 +38,24 @@ void Author::onViewWillAppear()
 
 void Author::onViewDidAppear()
 {
-    lv_obj_fade_out(_root, 500, 1500);
+    lv_group_t* group = lv_group_get_default();
+    LV_ASSERT_NULL(group);
+    lv_group_add_obj(group, _root);
 }
 
 void Author::onViewWillDisappear()
 {
-
+    lv_obj_fade_out(_root, 300, 1000);
 }
 
 void Author::onViewDidDisappear()
 {
-    Model.SetStatusBarAppear(true);
+    // Model.SetStatusBarAppear(true);
 }
 
 void Author::onViewUnload()
 {
     View.Delete();
-    Model.SetEncoderEnable(true);
     Model.Deinit();
 }
 
@@ -74,14 +75,10 @@ void Author::onEvent(lv_event_t* event)
     Author* instance = (Author*)lv_event_get_user_data(event);
     LV_ASSERT_NULL(instance);
 
-    lv_obj_t* obj = lv_event_get_current_target(event);
     lv_event_code_t code = lv_event_get_code(event);
 
-    if (obj == instance->_root)
+    if (code == LV_EVENT_PRESSED)
     {
-        if (code == LV_EVENT_LEAVE)
-        {
-            //instance->Manager->Pop();
-        }
+        instance->_Manager->Replace("Pages/Dialplate");
     }
 }
