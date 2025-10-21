@@ -53,6 +53,7 @@ void SystemInfos::onViewDidAppear()
     lv_group_t* group = lv_group_get_default();
     LV_ASSERT_NULL(group);
     View.onFocus(group);
+    lv_obj_add_event_cb(View.ui.mag.icon, onEventMAG, LV_EVENT_ALL, this);
 }
 
 void SystemInfos::onViewWillDisappear()
@@ -175,5 +176,18 @@ void SystemInfos::onEvent(lv_event_t* event)
         {
             instance->_Manager->Pop();
         }
+    }
+}
+
+void SystemInfos::onEventMAG(lv_event_t* event)
+{
+    SystemInfos* instance = (SystemInfos*)lv_event_get_user_data(event);
+    LV_ASSERT_NULL(instance);
+
+    lv_event_code_t code = lv_event_get_code(event);
+
+    if (code == LV_EVENT_PRESSED)
+    {
+        instance->_Manager->Replace("Pages/Compass");
     }
 }

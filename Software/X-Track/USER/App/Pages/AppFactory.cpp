@@ -27,6 +27,7 @@
 #include "SystemInfos/SystemInfos.h"
 #include "StartUp/StartUp.h"
 #include "Author/Author.h"
+#include "Compass/Compass.h"
 
 #define APP_CLASS_MATCH(className)\
 do{\
@@ -44,6 +45,7 @@ PageBase* AppFactory::CreatePage(const char* name)
     APP_CLASS_MATCH(SystemInfos);
     APP_CLASS_MATCH(Startup);
     APP_CLASS_MATCH(Author);
+    APP_CLASS_MATCH(Compass);
 
     return nullptr;
 }
