@@ -418,6 +418,9 @@
     <Filter Include="lvgl\examples\anim">
       <UniqueIdentifier>{effdcfb6-96d7-4c48-b546-18ac6c30c910}</UniqueIdentifier>
     </Filter>
+    <Filter Include="App\Pages\Compass">
+      <UniqueIdentifier>{a556f93f-a1ef-49c2-b9c9-f88c38c2c672}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lvgl\examples\get_started\lv_example_get_started.h">
@@ -1037,6 +1040,15 @@
     </ClInclude>
     <ClInclude Include="lvgl\examples\anim\lv_example_anim.h">
       <Filter>lvgl\examples\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\USER\App\Pages\Compass\Compass.h">
+      <Filter>App\Pages\Compass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\USER\App\Pages\Compass\CompassModel.h">
+      <Filter>App\Pages\Compass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\USER\App\Pages\Compass\CompassView.h">
+      <Filter>App\Pages\Compass</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2107,6 +2119,15 @@
     </ClCompile>
     <ClCompile Include="lvgl\examples\anim\lv_example_anim_timeline_1.c">
       <Filter>lvgl\examples\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\USER\App\Pages\Compass\Compass.cpp">
+      <Filter>App\Pages\Compass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\USER\App\Pages\Compass\CompassModel.cpp">
+      <Filter>App\Pages\Compass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\USER\App\Pages\Compass\CompassView.cpp">
+      <Filter>App\Pages\Compass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

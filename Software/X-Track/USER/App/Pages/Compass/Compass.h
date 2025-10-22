@@ -3,7 +3,6 @@
 
 #include "CompassModel.h"
 #include "CompassView.h"
-#include "App/Utils/PageManager/PageBase.h"
 
 namespace Page {
 class Compass : public PageBase {
